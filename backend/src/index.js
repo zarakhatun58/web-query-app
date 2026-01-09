@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require("cors");
 const { Queue } = require("bullmq");
 const { db, tasks } = require("./db");
 
@@ -10,7 +11,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",         
-      "https://your-frontend.onrender.com", 
+      "https://web-query-frontend.onrender.com", 
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
